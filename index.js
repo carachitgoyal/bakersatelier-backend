@@ -19,6 +19,6 @@ mongoose
 
 app.use('/api/v1/items', itemsRouter);
 
-app.listen(8080, () => {
-  console.log('app running on port 8080');
+app.listen(process.env.PORT || 5000, '0.0.0.0', () => {
+  console.log(`Listening on port ${process.env.PORT || 5000}!`);
 });
